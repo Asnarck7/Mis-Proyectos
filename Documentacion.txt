@@ -338,3 +338,13 @@ CREATE TABLE usuarios (
 +---------------------+          | contrasena       |
                                  | creado_en        |
                                  +------------------+
+
+## Restaurar la base de datos
+
+1. Descarga el archivo `hotel_pijao_del_sol.sql` desde el repositorio.
+2. Abre [phpMyAdmin](http://localhost/phpmyadmin) en XAMPP.
+3. Crea una nueva base de datos con el nombre `hotel_pijao_del_sol` (o el nombre que prefieras).
+4. Selecciona la base de datos y ve a la pestaña **Importar**.
+5. Selecciona el archivo `hotel_pijao_del_sol.sql` que descargaste.
+6. Haz clic en **Ejecutar** para restaurar la base de datos.
+
