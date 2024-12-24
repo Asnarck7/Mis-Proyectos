@@ -1,0 +1,146 @@
+/* Contenedor del chatbot */
+.chatbot-container {
+    position: fixed; /* El chatbot se fija en una posición en la pantalla */
+    bottom: 50px; /* Distancia desde el borde inferior de la pantalla */
+    right: 40px; /* Distancia desde el borde derecho de la pantalla */
+    z-index: 1000; /* Prioridad visual, para estar sobre otros elementos */
+}
+
+/* Imagen del ícono del chatbot */
+.chatbot-toggle img {
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar sobre la imagen */
+    border-radius: 100%; /* Hace que la imagen tenga forma circular */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra para destacar */
+    border: 2px solid #3a0505; /* Borde azul alrededor de la imagen */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.chatbot-toggle img:focus {
+    outline: none; /* Asegura que no se muestre un borde amarillo al hacer clic */
+}
+
+.chatbot-toggle img:hover {
+    transform: scale(1.5); /* Aumenta el tamaño del ícono al pasar el mouse */
+}
+
+/* Ventana emergente del chatbot */
+.chatbot-popup {
+    display: none; /* Inicialmente oculta */
+    position: fixed; /* Permite que la ventana se mantenga fija en la pantalla */
+    bottom: 80px; /* Ubicación encima del ícono */
+    right: 20px; /* Alineada con el ícono */
+    width: 420px; /* Ancho de la ventana del chatbot */
+    max-height: 450px; /* Altura máxima */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    flex-direction: column; /* Orientación vertical del contenido */
+    z-index: 1100; /* Prioridad mayor que el ícono */
+    overflow: hidden; /* Oculta contenido que exceda el tamaño */
+    animation: slideUp 0.5s ease-out; /* Animación de deslizamiento */
+}
+
+/* Animación para que la ventana del chatbot se deslice desde abajo */
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px); /* Comienza desplazada hacia abajo */
+        opacity: 0; /* Totalmente transparente */
+    }
+    100% {
+        transform: translateY(0); /* Termina en su posición normal */
+        opacity: 1; /* Totalmente visible */
+    }
+}
+
+/* Encabezado del chatbot */
+.chatbot-header {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    padding: 12px; /* Espaciado interno */
+    border-radius: 15px 15px 0 0; /* Bordes superiores redondeados */
+    display: flex; /* Distribución horizontal del contenido */
+    justify-content: space-between; /* Espaciado entre título y botón de cierre */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+/* Cuerpo del chatbot */
+.chatbot-body {
+    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
+    display: flex; /* Flexbox para organización */
+    flex-direction: column; /* Contenido apilado verticalmente */
+}
+
+/* Área de mensajes del chatbot */
+.chatbot-messages {
+    flex-grow: 1; /* Expande esta área para usar el espacio disponible */
+    padding: 12px; /* Espaciado interno */
+    overflow-y: auto; /* Barra de desplazamiento vertical si el contenido excede */
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+
+/* Mensaje del bot */
+.bot-message {
+    background-color: #e6e6e6; /* Fondo gris claro */
+    color: #333; /* Texto oscuro */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 8px 0; /* Espaciado entre mensajes */
+    max-width: 80%; /* Ancho máximo */
+}
+
+/* Mensaje del usuario */
+.user-message {
+    background-color: #007bff; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 8px 0; /* Espaciado entre mensajes */
+    align-self: flex-end; /* Alineado a la derecha */
+    max-width: 80%; /* Ancho máximo */
+}
+
+/* Formulario del chatbot */
+#chatbotForm {
+    display: flex; /* Flexbox para organizar el campo de entrada y botón */
+    border-top: 1px solid #ddd; /* Línea separadora del formulario */
+}
+
+/* Campo de entrada del mensaje */
+#chatbotInput {
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    border: none; /* Sin bordes */
+    padding: 12px; /* Espaciado interno */
+    border-radius: 0 0 0 15px; /* Bordes inferiores redondeados a la izquierda */
+    outline: none; /* Sin borde azul al enfocar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Hover sobre el campo de entrada */
+#chatbotInput:hover {
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); /* Resalta con un borde azul al pasar el mouse */
+}
+
+/* Botón de enviar */
+#chatbotForm button {
+    background-color: #007bff; /* Fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 12px; /* Espaciado interno */
+    border-radius: 0 0 15px 0; /* Bordes inferiores redondeados a la derecha */
+    cursor: pointer; /* Cambia el cursor a "mano" */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+/* Hover del botón de enviar */
+#chatbotForm button:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Aumenta el tamaño del botón al pasar el mouse */
+}
+
+/* Hover del botón de enviar (efecto de pulsación) */
+#chatbotForm button:active {
+    transform: scale(1.1); /* Hace que el botón se "pulse" ligeramente */
+}

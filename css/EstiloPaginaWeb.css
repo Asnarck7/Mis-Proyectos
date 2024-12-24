@@ -1,0 +1,584 @@
+    /* General */
+    body {
+      font-family: Arial, sans-serif; /* Establece la fuente predeterminada del texto. */
+      margin: 0; /* Elimina los márgenes alrededor de la página. */
+      padding: 0; /* Elimina los rellenos alrededor de la página. */
+      background-color: #f0f8ff; /* Fondo azul claro para toda la página. */
+      color: #3a0505; /* Texto azul oscuro para facilitar la lectura. */
+  }
+
+  /* Estilo general para el header */
+header {
+  position: fixed; /* El encabezado permanece fijo en la parte superior */
+  top: 0;
+  width: 100%;
+  background-color: #e7ca73;
+  color: #3a0505;
+  padding: 10px 20px; /* Padding inicial */
+  text-align: center;
+  font-size: 15px;
+  transition: height 0.3s ease, padding 0.3s ease; /* Transición suave para el cambio de altura y padding */
+  z-index: 1000; /* Para asegurarse de que el encabezado quede sobre otros contenidos */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em; /* Tamaño inicial de la fuente del título */
+  transition: font-size 0.3s ease; /* Transición suave para el tamaño del título */
+}
+
+
+  
+  nav ul {
+      list-style: none; /* Elimina los puntos o números de la lista de navegación. */
+      padding: 0; /* Elimina el relleno interno de la lista. */
+      margin: 0; /* Elimina los márgenes alrededor de la lista. */
+      display: flex; /* Hace que los elementos de la lista se organicen en línea. */
+      justify-content: center; /* Centra los elementos de la lista horizontalmente. */
+      gap: 20px;
+  }
+
+  nav ul li {
+      margin: 0 15px; /* Añade espacio horizontal entre los elementos del menú. */
+  }
+
+  nav ul li a {
+      text-decoration: none;
+      color: #ffffff; 
+      font-weight: bold; 
+  }
+
+  nav ul li a:hover {
+      text-decoration: underline; /* Añade un subrayado cuando se pasa el ratón sobre los enlaces. */
+  }
+
+  /* Secciones */
+  section {
+      margin: 20px auto; /* Añade espacio superior e inferior y centra horizontalmente. */
+      padding: 20px; /* Añade espacio interno alrededor del contenido de las secciones. */
+      max-width: 900px; /* Limita el ancho máximo de las secciones a 900px. */
+      background-color: #ffffff; /* Fondo blanco para las secciones. */
+      border-radius: 8px; /* Bordes redondeados para un diseño moderno. */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto de elevación. */
+  }
+  
+  .sectionInicio {
+      margin-top: 150px; /* Añade un margen superior para separarla del encabezado fijo. */
+  }
+
+  section h2 {
+      border-bottom: 2px solid #003366; /* Línea azul debajo de los títulos de las secciones. */
+      padding-bottom: 5px; /* Espacio entre el texto y la línea inferior. */
+      color: #003366; /* Color azul fuerte para los títulos de las secciones. */
+  }
+
+  section p, section ul {
+      margin: 15px 0; /* Añade espacio vertical alrededor de los párrafos y listas. */
+  }
+
+  /* Listas */
+  ul {
+      padding-left: 20px; /* Añade sangría a las listas para mayor claridad. */
+  }
+
+  ul li {
+      margin-bottom: 10px; /* Añade espacio entre los elementos de las listas. */
+  }
+
+  /* Galería */
+  section#galeria div {
+      display: flex; /* Organiza los elementos de la galería en línea. */
+      justify-content: space-around; /* Distribuye los elementos con espacio entre ellos. */
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario. */
+      gap: 15px; /* Espaciado uniforme entre elementos de la galería. */
+  }
+
+  section#galeria img {
+      border: 2px solid #003366; /* Añade un borde azul alrededor de las imágenes. */
+      border-radius: 8px; /* Bordes redondeados para las imágenes. */
+      width: 200px; /* Fija el ancho de las imágenes a 200px. */
+      height: auto; /* Ajusta automáticamente la altura para mantener la proporción. */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar las imágenes. */
+  }
+
+  /* Pie de página */
+  footer {
+      background-color: #003366; /* Fondo azul fuerte para el pie de página. */
+      color: #ffffff; /* Texto blanco para contraste con el fondo. */
+      text-align: center; /* Centra el texto en el pie de página. */
+      padding: 15px; /* Añade espacio interno alrededor del contenido del pie de página. */
+      margin-top: 20px; /* Espacio superior para separar el pie de página del contenido principal. */
+  }
+
+  footer a {
+      color: #00bfff; /* Azul cielo para los enlaces en el pie de página. */
+      text-decoration: none; /* Elimina el subrayado de los enlaces en el pie de página. */
+  }
+
+  footer a:hover {
+      text-decoration: underline; /* Añade un subrayado al pasar el ratón sobre los enlaces. */
+  }
+
+  .fachada{
+      border-radius: 20%;
+      width: 300px;
+      height: 300px;
+      background: center;
+      background-size: cover;
+      margin: auto;
+      display: block;
+      box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
+  }
+
+  .logo {
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      /* Posición independiente del flujo */
+      /* Ajuste Vertical */
+      top: center;
+      /* Ajuste Horizontal */
+      left: center;
+      /*Asegurar que este sobre los elemmentos*/
+      z-index: 10;
+      pointer-events: none;
+
+  }
+  
+  
+
+  /* Estilo para la imagen dentro de los servicios */
+  .ImagenServicio {
+      width: 350px;
+      height: 250px; 
+      object-fit: cover; 
+      border-radius: 15%; 
+      box-shadow: 0 7px 7px rgba(0, 0, 0, 0.4);
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  /* Contenedor general para los servicios */
+  .servicios-grid {
+      display: flex; 
+      flex-wrap: wrap;
+      gap: 20px; 
+      justify-content: space-between;
+  }
+
+  /* Estilo para cada elemento de servicio */
+  .servicio-item {
+      text-align: center; 
+      width: 45%; 
+      box-sizing: border-box; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Vamos a realizar los ajustes del boton que se desplaza cuando bajamos la pantalla */
+  /* Contenedor del menú (inicialmente oculto) */
+  .contenedorOpciones {
+      position: fixed;
+      top: 0;
+      right: -350px; /* El menú comienza fuera de la pantalla */
+      background-color: #3a0505;
+      height: 100%;
+      width: 250px; /* El ancho del menú */
+      padding: 20px;
+      border-radius: 8px 0 0 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: right 0.5s ease-in-out; /* Animación de deslizamiento */
+      z-index: 99;
+  }
+
+  /* Mostrar el menú y mover el botón dentro del contenedor */
+  .contenedorOpciones.mostrar {
+      right: 0; /* El menú se mueve hacia la izquierda (se muestra) */
+  }
+
+  /* Mover el botón dentro del contenedor junto con el menú */
+  .contenedorOpciones.mostrar .BotonOpciones {
+      right: 270px; /* El botón se mueve dentro del contenedor */
+  }
+
+  /* Estilo para la lista */
+  ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 50px; /* Espaciado superior para no estar pegado al borde */
+  }
+
+  ul li {
+      margin: 10px 0;
+  }
+
+  ul li a {
+      text-decoration: none;
+      color: #f0ed4d;
+      font-size: 18px;
+      transition: color 0.3s ease;
+  }
+
+  /* Efecto al pasar el mouse sobre los enlaces */
+  ul li a:hover {
+      color: burlywood;
+  }
+
+  /*Agregamos la tablas debajo de los servicios*/
+  .tabla-precios {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #ffffff;
+  }
+  .tabla-precios th, .tabla-precios td {
+      border: 1px solid #b0b0b0;
+      padding: 10px;
+      text-align: center;
+  }
+  .tabla-precios th {
+      background-color: #004a8f;
+      color: #ffffff;
+  }
+  .tabla-precios tr:nth-child(even) {
+      background-color: #eaf4ff;
+  }
+  .tabla-precios tr:hover {
+      background-color: #d1e7ff;
+  }
+
+
+  /* Contenedor del formulario */
+  .form-container {
+  
+  width: center; /* Ocupa el 100% del ancho disponible. */
+  max-width: center; /* Limita el ancho máximo del formulario. */
+  background-color: #ffffff; /* Fondo blanco para contraste. */
+  padding: 20px; /* Espaciado interno del formulario. */
+  border-radius: 8px; /* Bordes redondeados para un diseño más agradable. */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad. */
+  }
+
+  /* Título del formulario */
+  .form-container h2 {
+  text-align: center; /* Centra el texto del título. */
+  color: #004a8f; /* Azul oscuro para resaltar. */
+  margin-bottom: 20px; /* Espaciado inferior para separar del formulario. */
+}
+
+  /* Campos del formulario */
+  .form-container input, .form-container textarea {
+  width: 100%; /* Ocupa todo el ancho del contenedor. */
+  padding: 10px; /* Espaciado interno para comodidad al escribir. */
+  margin-bottom: 15px; /* Espaciado inferior entre los campos. */
+  border: 1px solid #ccc; /* Borde gris claro. */
+  border-radius: 5px; /* Bordes redondeados. */
+  font-size: 16px; /* Tamaño de texto estándar. */
+}
+
+  /* Botón de envío del formulario */
+  .form-container button {
+  width: 100%; /* Ocupa todo el ancho disponible. */
+  padding: 10px; /* Espaciado interno. */
+  background-color: #004a8f; /* Fondo azul oscuro. */
+  color: #ffffff; /* Texto blanco. */
+  font-size: 16px; /* Tamaño del texto del botón. */
+  border: none; /* Sin borde adicional. */
+  border-radius: 5px; /* Bordes redondeados. */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón. */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color. */
+}
+
+  /* Efecto al pasar el cursor sobre el botón */
+  .form-container button:hover {
+  background-color: #00376b; /* Azul más oscuro al pasar el cursor. */
+}
+
+/* Asegúrate de tener definida la variable --c o reemplázala por un color específico */
+:root {
+  --c: #fff; /* Color blanco para los spans */
+  --bg-color: #4CAF50; /* Color de fondo verde */
+  --hover-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo general para el botonLogin */
+.botonLogin {
+  background: linear-gradient(45deg, #4CAF50, #388E3C); /* Gradiente para el fondo */
+  color: white; /* Color blanco para el texto */
+  padding: 18px 35px; /* Espaciado interno más grande */
+  text-align: center; /* Centra el texto horizontalmente */
+  text-decoration: none; /* Elimina el subrayado */
+  display: inline-block; /* Para que los botones se alineen horizontalmente */
+  font-size: 18px; /* Tamaño de la fuente más grande */
+  font-weight: bold; /* Fuente en negrita */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  border: none; /* Elimina el borde */
+  border-radius: 50px; /* Bordes redondeados más suaves */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Efectos suaves */
+  position: absolute; /* Posiciona el botón de forma absoluta */
+  top: 20px; /* Ajusta la distancia desde la parte superior */
+  left: 30px; /* Ajusta la distancia desde la parte izquierda */
+  z-index: 10; /* Asegura que esté encima de otros elementos */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+  overflow: hidden; /* Asegura que los spans no se salgan del área del botón */
+  border-radius: 50px; /* Bordes redondeados */
+}
+
+/* Efecto al pasar el ratón sobre el botónLogin */
+.botonLogin:hover {
+  background-color: var(--hover-color); /* Color de fondo en hover */
+  transform: translateY(-4px); /* Sutil elevación al pasar el ratón */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+/* Estilo para los spans dentro de botonLogin */
+.botonLogin span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c); /* Color blanco para los spans */
+  transform: translateY(150%); /* Inicialmente fuera de la vista */
+  border-radius: 50%; /* Bordes redondeados */
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s); /* Desfase progresivo */
+  z-index: -1;
+}
+
+/* Transición de los spans en hover dentro de botonLogin */
+.botonLogin:hover span {
+  transform: translateY(0) scale(2); /* Movimiento y escalado de los spans */
+  color: black;
+}
+
+/* Cambio de color al pasar el mouse sobre el botonLogin */
+.botonLogin:hover {
+  color: black;
+}
+
+/* Numeración de los spans dentro de botonLogin */
+.botonLogin span:nth-child(1) {
+  --n: 1;
+}
+
+.botonLogin span:nth-child(2) {
+  --n: 2;
+}
+
+.botonLogin span:nth-child(3) {
+  --n: 3;
+}
+
+.botonLogin span:nth-child(4) {
+  --n: 4;
+}
+
+
+
+/* Modal el cuadro de iniciar sesion- Fondo */
+
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.modal-content2 {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  height: 430px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* boton iniciar sesion */
+/* Estilos comunes para el botón de Iniciar Sesión */
+/* Estilo común para los botones */
+.botonIniciar,
+.botoncrear,
+.botonempleados {
+  display: inline-block;
+  color: white;  /* Color de texto blanco */
+  padding: 12px 25px;  /* Relleno interno */
+  text-align: center;  /* Centrado del texto */
+  font-size: 16px;  /* Tamaño de fuente */
+  border-radius: 8px;  /* Bordes redondeados */
+  text-decoration: none;  /* Elimina el subrayado en el enlace */
+  cursor: pointer;  /* Puntero de mano al pasar el ratón */
+  transition: background-color 0.3s ease, transform 0.2s ease;  /* Transición suave */
+  margin-right: 15px;  /* Espacio entre los botones */
+}
+
+/* Botón Iniciar Sesión */
+.botonIniciar {
+  background-color: #4CAF50;  /* Color de fondo verde */
+}
+
+/* Estilo al pasar el ratón */
+.botonIniciar:hover {
+  background-color: #8be990;  /* Color de fondo más oscuro */
+  transform: scale(1.05);  /* Efecto de agrandamiento */
+}
+
+/* Estilo cuando se hace clic en el botón */
+.botonIniciar:active {
+  background-color: #388e3c;  /* Fondo aún más oscuro */
+}
+
+/* Opcional: Asegurarse de que el enlace no tenga subrayado */
+.botonIniciar a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* --------------------------------------------------------- */
+/* Botón Crear Cuenta */
+.botoncrear {
+  background-color: #004a8f;  /* Color de fondo azul */
+}
+
+/* Estilo al pasar el ratón */
+.botoncrear:hover {
+  background-color: #00bfff;  /* Color de fondo más claro */
+  transform: scale(1.05);  /* Efecto de agrandamiento */
+}
+
+/* Estilo cuando se hace clic en el botón */
+.botoncrear:active {
+  background-color: #224450;  /* Fondo aún más oscuro */
+}
+
+/* Opcional: Asegurarse de que el enlace no tenga subrayado */
+.botoncrear a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Botón Empleados */
+.botonempleados {
+  background-color: #f8921e;  /* Color de fondo naranja */
+}
+
+/* Estilo al pasar el ratón */
+.botonempleados:hover {
+  background-color: #fcff32;  /* Color de fondo más claro */
+  transform: scale(1.05);  /* Efecto de agrandamiento */
+}
+
+/* Estilo cuando se hace clic en el botón */
+.botonempleados:active {
+  background-color: #ff500f;  /* Fondo aún más oscuro */
+}
+
+/* Opcional: Asegurarse de que el enlace no tenga subrayado */
+.botonempleados a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* boton reservacion */
+/* Estilo para el botón de reservación */
+.boton-reservacion {
+  background-color: #ff0000; /* Color de fondo del botón */
+  color: #ffffff; /* Color del texto o icono */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Indicador de clic */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición */
+  display: inline-block;
+}
+
+.boton-reservacion:hover {
+  background-color:#3a0505; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Estilo del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* Fondo semitransparente */
+  overflow: auto;
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Tamaño del modal */
+  max-width: 400px; /* Máxima anchura */
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Boton de reservacion*/

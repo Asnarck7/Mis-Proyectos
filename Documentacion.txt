@@ -1,0 +1,340 @@
+1. Agregamos el Logo de la empresa Hotel Neiva PLaza
+2. Agregmos unas etiquetas donde al ejecutar un click #inicio">¿Quines somos?, #servicios">Servicios, #galeria">Galería, #contacto>Contacto
+3. Ya realizamos cambios en el #inicio ahora realizaremos cambios y ajustes en #Servicios
+4. realizamos una nueva version luego del 4 ya que en el cuatro se realizamos cambios en una matriz de la imagenes de servicios
+5. Ahora vamos a realizar dos nuevos section (Precios --> Precios de Habitacion)(Contacto--> Nombre, Correo, escribir un mensaje)
+5.1 Realizamos un cambio en el logo para que no corra los otros elementos 
+    .logo {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        /* Posición independiente del flujo */
+        position: absolute; 
+        /* Ajusta vertical */
+        top: 10px; 
+        /* Ajusta horizontal */
+        left: 10px; 
+        /*Asegurar que este sobre*/
+        z-index: 10;
+        opacity: 0.8; /* Hace el logo ligeramente transparente */
+        pointer-events: none; /* Permite que los clics pasen a través del logo */
+    }
+
+6. PHP (Hypertext Preprocessor) es un lenguaje de programación del lado del servidor diseñado principalmente para el desarrollo web. 
+Es ampliamente utilizado para crear sitios y aplicaciones dinámicas, lo que significa que puede generar contenido en respuesta a las 
+interacciones del usuario o a los datos almacenados en una base de datos.
+
+6.1 Características principales de PHP:
+Lenguaje del lado del servidor: PHP se ejecuta en el servidor web y genera contenido que se envía al navegador del usuario. 
+Esto permite manipular datos, interactuar con bases de datos y manejar la lógica del sitio antes de que se muestre al usuario.
+
+6.2 Código incrustado en HTML: PHP se puede mezclar con HTML, lo que facilita agregar lógica dinámica directamente dentro de páginas web. 
+Ejemplo:
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Bienvenido</h1>
+    <?php
+        echo "Hoy es " . date("Y-m-d");
+    ?>
+</body>
+</html>
+
+6.3 Compatibilidad con bases de datos: PHP se conecta fácilmente con bases de datos como MySQL, PostgreSQL y SQLite, 
+lo que lo hace ideal para aplicaciones que requieren almacenamiento de datos.
+
+6.4 Fácil de aprender y usar: Su sintaxis es sencilla y está diseñada para que sea intuitiva, incluso para principiantes. 
+Si ya conoces lenguajes como C o JavaScript, aprender PHP será más fácil.
+
+6.5 Multiplataforma: Funciona en diferentes sistemas operativos, como Windows, macOS y Linux, y es compatible con los 
+principales servidores web como Apache y Nginx.
+
+6.6 Extensiones y frameworks: PHP cuenta con una amplia variedad de extensiones para agregar funcionalidad adicional 
+(como manejo de imágenes o envío de correos) y frameworks populares como Laravel y Symfony que simplifican el desarrollo de aplicaciones complejas.
+
+6.7 Código abierto: Es gratuito y de código abierto, lo que lo hace accesible para cualquiera que desee usarlo o 
+contribuir a su desarrollo.
+
+6.8 Usos comunes de PHP:
+
+* Desarrollo de sitios web dinámicos: Crear páginas que cambian en función del usuario, como formularios de contacto,
+páginas de inicio de sesión o tiendas en línea.
+
+* Gestión de bases de datos: Leer, escribir y actualizar datos en bases de datos, como en sistemas de gestión de contenidos (CMS) como WordPress, Joomla o Drupal.
+
+* Aplicaciones web completas: Desarrollar aplicaciones más avanzadas, como sistemas de gestión empresarial o plataformas de aprendizaje en línea.
+
+* APIs: Crear servicios que permiten la interacción entre diferentes aplicaciones mediante REST o GraphQL.
+
+6.9 Ventajas de PHP:
+* Gran comunidad y recursos de aprendizaje.
+* Compatible con la mayoría de los servidores web.
+* Escalable para proyectos pequeños y grandes.
+* Amplia documentación oficial y herramientas de depuración.
+
+7.
+
+Paraiso-Version5CSS/
+│
+├── css/
+│   ├── StyleChat/
+│   │   ├── chatbot.css
+│   ├── EstiloPaginaWeb.css
+│
+├── js/
+│   ├── chatbot.js
+│   ├── script.js
+│   ├── javascript.js
+│
+├── php/
+│   ├── index.php
+│   ├── enviar_formulario.php
+│   ├── contacto.php
+│   ├── loginCliente/
+│   │   ├── validar_login.php
+│   │   ├── reservar.php
+│   │   ├── reservacion.php
+│   │   ├── procesar_reserva.php
+│   │   ├── mis_reservaciones.php
+│   │   ├── login.php
+│   │   ├── logout.php
+│   │   ├── conexion.php
+│   │   ├── cancelar_reserva.php
+│   ├── crearCuenta/
+│   │   ├── crearClientes.php
+│   │   ├── test.php
+│   │   ├── empleados/
+│   │       ├── crearEmpleados.php
+│   │       ├── indexEmpleados.php
+│   │       ├── iniciarSesionEmpleado.php
+│   │       ├── RolEmpleado/
+│   │           ├── login/
+│   │               ├── confirmarEliminacion.php
+│   │               ├── crearCuarto.php
+│   │               ├── editar.php
+│   │               ├── loginEmpleado.php
+│   │               ├── logoutEmpleado.php
+│   │               ├── verEmpleados.php
+│   │               ├── verReservas.php
+│
+├── assets/
+│   ├── images/
+│   │   ├── Habitaciones/
+│   │   │   ├── CerdirtoChatBot.png
+│   │   ├── fachada-1704375981.jpg
+│   │   ├── Gimnasio.jpg
+│   │   ├── habitaciones.jpg
+│   │   ├── LogoPijao.png
+│   │   ├── piscina.jpg
+│   │   ├── restaurante.jpg
+│   │   ├── spaT.avif
+│   │   ├── vistas al sol.webp
+│   ├── CapturaBaseDeDatos.PNG
+
+Tambien se realizo:
+1. index.php  
+Es la página principal del sitio web, donde los usuarios pueden acceder al sistema de reservas. Muestra las habitaciones disponibles y permite la navegación a otras secciones.
+
+2. loginCliente/  
+Esta carpeta contiene archivos para la autenticación y gestión de cuentas de clientes:
+- login.php: Página de inicio de sesión para los clientes.
+- reservacion.php: Página donde los clientes pueden hacer una reserva de habitación.
+- confirmacion.php: Página que muestra la confirmación de la reserva después de ser procesada.
+- logout.php: Permite al cliente cerrar sesión.
+- mis_reservaciones.php: Muestra las reservas realizadas por el cliente.
+- procesar_reserva.php: Archivos para procesar la reserva de una habitación.
+- reservar.php: Formulario para completar la reserva de una habitación.
+
+3. crearCuenta/  
+Esta carpeta se encarga de la gestión de cuentas de empleados y clientes:
+- test.php: Archivo de prueba para verificar la funcionalidad de la creación de cuentas.
+- crearClientes.php: Permite crear nuevas cuentas de cliente.
+- empleados/: Subcarpeta que contiene las funcionalidades de los empleados:
+  - indexEmpleados.php: Página principal para empleados.
+  - crearEmpleados.php: Formulario para crear nuevos empleados.
+  - RolEmpleado/: Subcarpeta dedicada a la gestión de roles de los empleados:
+    - iniciarSesionEmpleado.php: Página de inicio de sesión para empleados.
+    - login/: Subcarpeta con funcionalidades de autenticación y gestión de empleados.
+      - verEmpleados.php: Muestra todos los empleados registrados.
+      - logoutEmpleado.php: Permite a los empleados cerrar sesión.
+      - loginEmpleado.php: Página de inicio de sesión.
+      - editar.php: Permite editar la información de los empleados.
+      - crearCuarto.php: Permite a los empleados agregar habitaciones al sistema.
+
+4. Imagenes/Habitaciones/  
+Carpeta que contiene las imágenes de las habitaciones disponibles en el hotel. Estas imágenes se usan en las páginas donde se muestran las opciones de habitación al cliente.
+
+Arquitectura y Funcionalidad
+
+Interfaz de Usuario
+La interfaz de usuario está diseñada para ser intuitiva y fácil de usar. Los clientes pueden acceder al sistema de reservas a través de la página index.php, donde se muestran las habitaciones disponibles con sus detalles y precios. Pueden realizar una reserva llenando un formulario en la página reservacion.php.
+
+Gestión de Reservas
+Cuando un cliente realiza una reserva, el sistema recopila la información del cliente, como el nombre, correo electrónico, teléfono, fecha de entrada y salida, y el número de personas. Luego, la reserva es procesada en el archivo procesar_reserva.php, que confirma la disponibilidad y actualiza la base de datos.
+
+Autenticación de Cliente y Empleado
+Los clientes pueden crear una cuenta y acceder al sistema mediante loginCliente/login.php. Una vez autenticados, pueden ver sus reservas en la página mis_reservaciones.php. Los empleados, por su parte, tienen un panel de administración en empleados/indexEmpleados.php, donde pueden gestionar las reservas, crear habitaciones y gestionar las cuentas de los clientes.
+
+Administrador de Habitaciones
+Los empleados también pueden agregar nuevas habitaciones al sistema a través del archivo crearCuenta/empleados/RolEmpleado/login/crearCuarto.php. Este archivo permite agregar habitaciones con detalles como tipo, precio, capacidad, y una imagen representativa de la habitación.
+
+Estilos y Scripts
+- styles.css: Contiene los estilos CSS para la interfaz del sitio. Define la apariencia de las páginas, incluyendo colores, tipografías, márgenes y la disposición de los elementos en la página.
+- script.js y javascript.js: Archivos JavaScript para la gestión de la interactividad del sitio, como la validación de formularios y la gestión de eventos en la interfaz de usuario.
+
+----------------------------------------------
+
+BASE DE DATOS & ACTUALIZACION DEL PROYECTO
+
+hotel_pijao_del_sol //Nombre de la tabla
+
+## Descripción
+Este proyecto es una plataforma para la gestión del Hotel Pijao del Sol. Los empleados pueden gestionar reservas, crear habitaciones, ver los empleados registrados y mucho más. Además, los usuarios pueden interactuar con un chatbot llamado Asistente Piggi, que es una representación de la cultura del Tolima a través de la figura de la lechona.
+
+## Funcionalidades Principales
+
+1. **Login del Empleado**: 
+   - El empleado puede acceder a tres opciones: Crear cuenta, Iniciar sesión, Volver al inicio.
+   - Si elige crear cuenta, se le presenta un formulario para llenar con datos personales.
+   - Si elige iniciar sesión, debe ingresar su nombre de usuario y contraseña.
+   - Al iniciar sesión, verá una ventana con las opciones de "Crear Cuarto", "Ver Empleados" y "Ver Reservas".
+
+2. **Crear Cuenta de Empleado**:
+   - El formulario de creación de cuenta incluye los siguientes campos:
+     - Nombres
+     - Apellidos
+     - Nombre de Usuario
+     - Fecha de Nacimiento
+     - Teléfono
+     - Correo Electrónico
+     - Contraseña
+     - Confirmar Contraseña
+     - Salario (El salario se calcula como el salario mínimo multiplicado por un valor ingresado).
+   
+3. **Iniciar Sesión**:
+   - Al hacer clic en el botón de iniciar sesión, el empleado puede ingresar su nombre de usuario y contraseña.
+   - Si las credenciales son correctas, se accede a la página con las opciones: Crear Cuarto, Ver Empleados, Ver Reservas.
+
+4. **Crear Cuarto**:
+   - El empleado podrá crear un cuarto con los siguientes datos:
+     - Tipo de Habitación
+     - Descripción
+     - Precio por Noche
+     - Número de Elementos
+     - Capacidad
+     - Número de Habitación
+
+5. **Editar Habitaciones**:
+   - El empleado puede editar la información de una habitación existente, como el tipo de habitación, la descripción, el precio por noche, la capacidad, etc.
+
+6. **Ver Empleados**:
+   - El empleado puede ver los detalles de otros empleados registrados, como su nombre, usuario, correo, teléfono, fecha de nacimiento, salario, etc.
+
+7. **Ver Reservas**:
+   - Los empleados podrán ver las reservas de los usuarios que se han realizado en el hotel.
+
+8. **Eliminar Reserva**:
+   - Para eliminar una reserva, el empleado debe confirmar su contraseña como medida de seguridad.
+
+9. **Chatbot Asistente Piggi**:
+   - Los clientes podrán interactuar con un chatbot llamado "Asistente Piggi", que es una figura cultural representando la lechona del Tolima.
+   - El chatbot responderá preguntas frecuentes como: "¿Qué servicios ofrece el hotel?", "¿Cuáles son los precios?", "¿Cómo hacer una reserva?", etc.
+
+## Estructura de la Base de Datos
+
+CREATE TABLE cuartos (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    tipo_habitacion VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    descripcion TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    numero_elementos INT(11) NOT NULL,
+    capacidad INT(11) NOT NULL,
+    numero_habitacion INT(11) NOT NULL,
+    fecha_creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE empleados (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombres VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    apellidos VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    usuario VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    telefono VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    correo VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    contrasena VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    salario DECIMAL(10,2) NOT NULL,
+    fecha_creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id),
+    UNIQUE (usuario),
+    UNIQUE (correo)
+);
+
+CREATE TABLE mensajes (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    email VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    mensaje TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    fecha TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE reservas (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    id_habitacion INT(11) NOT NULL,
+    nombre VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    correo VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    telefono VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    comentarios TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+    fecha_entrada DATE NOT NULL,
+    fecha_salida DATE NOT NULL,
+    numero_personas INT(11) NOT NULL,
+    metodo_pago ENUM('tarjeta_credito', 'tarjeta_debito', 'efectivo') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    fecha_reserva TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    estado ENUM('pendiente', 'confirmada', 'cancelada') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'pendiente',
+    id_usuario INT(11) DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_habitacion) REFERENCES cuartos(id)
+);
+
+CREATE TABLE usuarios (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nombres VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    apellidos VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    nombre_usuario VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    correo VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    contrasena VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    creado_en TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id)
+);
+
++-------------------+             +------------------+               +-----------------------+
+|     usuarios      |             |      cuartos     |               |        reservas       |
++-------------------+             +------------------+               +-----------------------+
+| id (PK)           |<------------| id (PK)          |               | id (PK)               |
+| nombres           |             | tipo_habitacion  |               | id_habitacion (FK)    |
+| apellidos         |             | descripcion      |               | nombre                |
+| nombre_usuario    |             | precio           |               | correo                |
+| correo            |             | numero_elementos |               | telefono              |
+| contrasena        |             | capacidad        |               | comentarios           |
+| creado_en         |             | numero_habitacion|               | fecha_entrada         |
++-------------------+             | fecha_creacion   |               | fecha_salida          |
+                                 +------------------+                | numero_personas       |
+                                                                     | metodo_pago           |
+                                                                     | fecha_reserva         |
+                                                                     | estado                |
+                                                                     | id_usuario (FK)       |
+                                                                      +-----------------------+
+
+
++---------------------+          +------------------+    
+|      mensajes       |          |     usuarios     |
++---------------------+          +------------------+
+| id (PK)             |<---------| id (PK)          |
+| nombre              |          | nombres          |
+| email               |          | apellidos        |
+| mensaje             |          | nombre_usuario   |
+| fecha               |          | correo           |
++---------------------+          | contrasena       |
+                                 | creado_en        |
+                                 +------------------+
